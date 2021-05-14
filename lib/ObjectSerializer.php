@@ -214,6 +214,11 @@ class ObjectSerializer
      */
     public static function deserialize($data, $class, $httpHeaders = null)
     {
+        if (!empty($httpHeaders)
+            && array_key_exists('Content-Type', $httpHeaders)
+            && $httpHeaders['Content-Type'][0]==='application/json'){
+            $data=json_decode($data);
+        }
         if (null === $data) {
             return null;
         } elseif ('map[' === substr($class, 0, 4)) { // for associative array e.g. map[string,int]
