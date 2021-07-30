@@ -24,7 +24,6 @@ use ClouSale\AmazonSellingPartnerAPI\ObjectSerializer;
 /**
  * Item Class Doc Comment.
  *
-
  * @description An item in the Amazon catalog.
  *
  * @author   Stefan Neuhaus / ClouSale
@@ -45,22 +44,26 @@ class Item extends Categories implements ModelInterface, ArrayAccess
      *
      * @var string[]
      */
-    protected static $swaggerTypes = [
-        'identifiers' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType',
-'attribute_sets' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList',
-'relationships' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList',
-'sales_rankings' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList',    ];
+    protected static $swaggerTypes
+        = [
+            'identifiers'    => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType',
+            'attribute_sets' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList',
+            'relationships'  => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList',
+            'sales_rankings' => '\ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList',
+        ];
 
     /**
      * Array of property to format mappings. Used for (de)serialization.
      *
      * @var string[]
      */
-    protected static $swaggerFormats = [
-        'identifiers' => null,
-'attribute_sets' => null,
-'relationships' => null,
-'sales_rankings' => null,    ];
+    protected static $swaggerFormats
+        = [
+            'identifiers'    => null,
+            'attribute_sets' => null,
+            'relationships'  => null,
+            'sales_rankings' => null,
+        ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization.
@@ -88,33 +91,39 @@ class Item extends Categories implements ModelInterface, ArrayAccess
      *
      * @var string[]
      */
-    protected static $attributeMap = [
-        'identifiers' => 'Identifiers',
-'attribute_sets' => 'AttributeSets',
-'relationships' => 'Relationships',
-'sales_rankings' => 'SalesRankings',    ];
+    protected static $attributeMap
+        = [
+            'identifiers'    => 'Identifiers',
+            'attribute_sets' => 'AttributeSets',
+            'relationships'  => 'Relationships',
+            'sales_rankings' => 'SalesRankings',
+        ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses).
      *
      * @var string[]
      */
-    protected static $setters = [
-        'identifiers' => 'setIdentifiers',
-'attribute_sets' => 'setAttributeSets',
-'relationships' => 'setRelationships',
-'sales_rankings' => 'setSalesRankings',    ];
+    protected static $setters
+        = [
+            'identifiers'    => 'setIdentifiers',
+            'attribute_sets' => 'setAttributeSets',
+            'relationships'  => 'setRelationships',
+            'sales_rankings' => 'setSalesRankings',
+        ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests).
      *
      * @var string[]
      */
-    protected static $getters = [
-        'identifiers' => 'getIdentifiers',
-'attribute_sets' => 'getAttributeSets',
-'relationships' => 'getRelationships',
-'sales_rankings' => 'getSalesRankings',    ];
+    protected static $getters
+        = [
+            'identifiers'    => 'getIdentifiers',
+            'attribute_sets' => 'getAttributeSets',
+            'relationships'  => 'getRelationships',
+            'sales_rankings' => 'getSalesRankings',
+        ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -167,15 +176,19 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Constructor.
      *
-     * @param mixed[] $data Associated array of property values
+     * @param  mixed[]  $data  Associated array of property values
      *                      initializing the model
      */
     public function __construct(array $data = null)
     {
-        $this->container['identifiers'] = isset($data['identifiers']) ? $data['identifiers'] : null;
-        $this->container['attribute_sets'] = isset($data['attribute_sets']) ? $data['attribute_sets'] : null;
-        $this->container['relationships'] = isset($data['relationships']) ? $data['relationships'] : null;
-        $this->container['sales_rankings'] = isset($data['sales_rankings']) ? $data['sales_rankings'] : null;
+        $this->container['identifiers'] = isset($data['identifiers'])
+            ? $data['identifiers'] : null;
+        $this->container['attribute_sets'] = isset($data['attribute_sets'])
+            ? $data['attribute_sets'] : null;
+        $this->container['relationships'] = isset($data['relationships'])
+            ? $data['relationships'] : null;
+        $this->container['sales_rankings'] = isset($data['sales_rankings'])
+            ? $data['sales_rankings'] : null;
     }
 
     /**
@@ -218,7 +231,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets identifiers.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType $identifiers identifiers
+     * @param  \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\IdentifierType  $identifiers  identifiers
      *
      * @return $this
      */
@@ -242,7 +255,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets attribute_sets.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList $attribute_sets attribute_sets
+     * @param  \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\AttributeSetList  $attribute_sets  attribute_sets
      *
      * @return $this
      */
@@ -266,7 +279,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets relationships.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList $relationships relationships
+     * @param  \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\RelationshipList  $relationships  relationships
      *
      * @return $this
      */
@@ -290,7 +303,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Sets sales_rankings.
      *
-     * @param \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList $sales_rankings sales_rankings
+     * @param  \ClouSale\AmazonSellingPartnerAPI\Models\Catalog\SalesRankList  $sales_rankings  sales_rankings
      *
      * @return $this
      */
@@ -304,7 +317,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param int $offset Offset
+     * @param  int  $offset  Offset
      *
      * @return bool
      */
@@ -316,20 +329,21 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Gets offset.
      *
-     * @param int $offset Offset
+     * @param  int  $offset  Offset
      *
      * @return mixed
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return isset($this->container[$offset]) ? $this->container[$offset]
+            : null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param int   $offset Offset
-     * @param mixed $value  Value to be set
+     * @param  int  $offset  Offset
+     * @param  mixed  $value  Value to be set
      *
      * @return void
      */
@@ -345,7 +359,7 @@ class Item extends Categories implements ModelInterface, ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param int $offset Offset
+     * @param  int  $offset  Offset
      *
      * @return void
      */
@@ -370,4 +384,5 @@ class Item extends Categories implements ModelInterface, ArrayAccess
 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
+
 }
