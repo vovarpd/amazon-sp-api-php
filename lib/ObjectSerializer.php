@@ -266,6 +266,10 @@ class ObjectSerializer
                 return null;
             }
         } elseif (in_array($class, ['DateTime', 'bool', 'boolean', 'byte', 'double', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
+            // workaround for MaterialType [{}] response (probably bug) instead []
+            if($data instanceof \stdClass && $class==='string'){
+                $class='object';
+            }
             settype($data, $class);
 
             return $data;
